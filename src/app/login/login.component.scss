@@ -1,0 +1,58 @@
+$bgcolor: #32a89e;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  height:280px;
+  width:250px;
+  align-items: center;
+}
+
+form {
+  margin:0;
+}
+
+label {
+  display: block;
+  width: 12em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+  color: #fff;
+}
+
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  border: solid white 1px;
+}
+
+button {
+  background-color: $bgcolor;
+  border: solid black 1px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+mat-error {
+  font-size: 0.7em;
+}
+
+
+

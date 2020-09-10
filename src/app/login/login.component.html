@@ -1,0 +1,31 @@
+
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
+
+<label>
+  Email:
+  <mat-form-field class="full-width-input">
+  <input matInput type="text" formControlName="email" required>
+  <mat-error *ngIf="isFieldInvalid('email')">
+            Please enter a valid email
+  </mat-error>
+</mat-form-field>
+</label>
+<br>
+<label>
+  Password:
+  <mat-form-field class="full-width-input">
+  <input matInput type="password" formControlName="pass" required>
+  <mat-error *ngIf="isFieldInvalid('pass')">
+            Please enter a valid password
+  </mat-error>
+  </mat-form-field>  
+</label>
+<br>
+<br>
+<button mat-raised-button color="primary" type="submit">Login</button>
+
+</form>
+<router-outlet></router-outlet>
+
+

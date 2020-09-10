@@ -1,0 +1,54 @@
+$bgimg: url("../../assets/im1.jpg");
+$bgsize: 100%;
+
+div {
+	background-image: $bgimg;
+	background-size: $bgsize;
+}
+
+th, td 
+{
+    margin: 10px 0;
+    border: solid 1px #333;
+    padding: 2px 4px;
+    height: 60px;
+}
+th {
+    font-weight:bold;
+}
+
+h3 {
+	margin:0 auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	padding: 15px;
+	font-weight:bold;
+}
+
+table {
+	width: 750px;
+	border: solid 1px #fff;
+	margin:0 auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(169, 169, 169, 0.9);
+}
+
+tr:not(:first-child):hover {
+	cursor: pointer;
+	background-color: #32a89e;
+}
+
+a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+div.arrEmps {
+	max-width: 1600px;
+	height:auto;
+	align-items:center;
+}

@@ -1,0 +1,19 @@
+<div class="container container-body">
+  <mat-drawer-container class="nav-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+    <h3 appHighlight>Select Action</h3>
+    <mat-list role="list" class="side-bar">
+      <mat-list-item role="listitem"><a (click)="toggleAction('Home')">Home</a></mat-list-item>
+      <mat-list-item role="listitem"><a (click)="toggleAction('Login')">Login</a></mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button mat-raised-button (click)="drawer.toggle()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"/></svg></button>
+    <div id="forlog">
+      <app-login *ngIf="showLogin"></app-login>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+  
+  </div>

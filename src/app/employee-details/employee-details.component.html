@@ -1,0 +1,17 @@
+<div class="emp">
+<div *ngIf="emp && images" class="empcontent">
+  <h2>{{emp.employee_name | uppercase}}</h2>
+  <br>
+  <div><span>ID: </span>{{emp.id}}</div>
+  <br>
+  <div><span>Salary: </span>{{emp.employee_salary|currency:'USD'}}</div>
+  <br>
+  <div><span>Age: </span>{{emp.employee_age|age}}</div>
+  <br>
+  <div id="mess"><span appHighlight>Stay here if this is your mood!</span></div>
+  <br>
+  <div><img src={{images[emp.id-1]}}></div>
+  <br>
+  <button (click)="goBack()">Go back if this is not how you are feeling!</button>
+</div>
+</div>

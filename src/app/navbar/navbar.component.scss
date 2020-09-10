@@ -1,0 +1,49 @@
+$bgcolor: #32a89e;
+$bgimg: url("../../assets/im1.jpg");
+$bgsize: 100%;
+
+.nav-container {
+  height: 500px;
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+  background-color: $bgcolor;
+  color: #fff;
+}
+
+#forlog {
+  position: absolute;
+  right: 55%;
+}
+
+button:hover {
+  background-color: $bgcolor;
+}
+
+mat-list-item {
+  cursor: pointer;
+  font-size: 1em;
+}
+
+mat-list-item:hover {
+  background-color: #cfd8dc;
+}
+
+div.container.container-body {
+  margin:0;
+  padding:0;
+  max-width:100%;
+}
+
+mat-drawer-content {
+  background-image: $bgimg;
+  background-size: $bgsize;
+}

@@ -1,0 +1,27 @@
+<div style="text-align:center;" class="arrEmps">
+    <h3 appHighlight>Emo's Employees</h3>
+
+    <table *ngIf="arrEmps" class="vertical-center">
+        <!-- ADD HEADERS -->
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Age</th>
+            <th></th>
+        </tr>
+
+        <!-- BIND ARRAY TO TABLE -->
+        
+        <tr *ngFor="let emp of arrEmps">
+            
+
+            <td>{{emp.id}}</td>
+            <td>{{emp.employee_name}}</td>
+            <td>{{emp.employee_salary|currency:'USD'}}</td>
+            <td>{{emp.employee_age|age}}</td>
+            <td><a style="color: #fff;" [routerLink]="['/employee', emp.id]" (click)="onSelect(emp)">Click here for more</a></td>
+        </tr>
+        
+    </table>
+</div>
