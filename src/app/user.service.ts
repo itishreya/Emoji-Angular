@@ -10,16 +10,22 @@ export class UserService {
   private uemail;
 
   constructor(private router: Router) { 
-  	this.isLoggedIn = false;
-    this.router.navigate(['/']);
   }
 
-  setUserLoggedIn() {
-  	this.isLoggedIn = true;
+  setUserLoggedIn(value: boolean) {
+  	this.isLoggedIn = value;
   }
 
   getUserLoggedIn() {
   	return this.isLoggedIn;
+  }
+
+  currentUser() {
+    return JSON.parse(localStorage.getItem('currentUser'));
+  }
+
+  logout() {
+    return localStorage.clear();
   }
 
   

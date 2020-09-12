@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
     console.log(uemail, upass);
 
     if(uemail=="iam@abc.com" && upass=="abceds"){
-      this.user.setUserLoggedIn();
+      localStorage.setItem('currentUser', JSON.stringify({token:'edstoken', name:uemail}));
+      this.user.setUserLoggedIn(true);
       this.router.navigate(['/employees']);
     }
   }

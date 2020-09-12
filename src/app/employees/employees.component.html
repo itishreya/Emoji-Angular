@@ -1,5 +1,5 @@
 <div style="text-align:center;" class="arrEmps">
-    <h3 appHighlight>Emo's Employees</h3>
+    <h3 appHighlight>Emo's Employees<div><a routerLink="/" (click)="onSel()" class="button">Logout</a></div></h3>
 
     <table *ngIf="arrEmps" class="vertical-center">
         <!-- ADD HEADERS -->
@@ -20,8 +20,9 @@
             <td>{{emp.employee_name}}</td>
             <td>{{emp.employee_salary|currency:'USD'}}</td>
             <td>{{emp.employee_age|age}}</td>
-            <td><a style="color: #fff;" [routerLink]="['/employee', emp.id]" (click)="onSelect(emp)">Click here for more</a></td>
+            <td><a style="color: #fff;" class="detaillink" [routerLink]="['/employee', emp.id]" (click)="onSelect(emp)">Click here for more</a></td>
         </tr>
         
     </table>
+    
 </div>

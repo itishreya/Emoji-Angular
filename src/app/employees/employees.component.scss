@@ -1,5 +1,6 @@
 $bgimg: url("../../assets/im1.jpg");
 $bgsize: 100%;
+$bgcolor: #32a89e;
 
 div {
 	background-image: $bgimg;
@@ -42,7 +43,7 @@ tr:not(:first-child):hover {
 	background-color: #32a89e;
 }
 
-a {
+a.detaillink {
 	color: #fff;
 	text-decoration: underline;
 }
@@ -51,4 +52,20 @@ div.arrEmps {
 	max-width: 1600px;
 	height:auto;
 	align-items:center;
+}
+
+.button {
+  background-color: $bgcolor;
+  border: solid black 1px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-size:0.5em;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }

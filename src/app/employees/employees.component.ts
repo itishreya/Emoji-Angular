@@ -31,4 +31,9 @@ export class EmployeesComponent implements OnInit {
         this.selectedEmployeeId = emp.id;
     }
 
+  onSel() {
+    this.user.setUserLoggedIn(false);
+    this.user.logout();
+  }
+
 }
