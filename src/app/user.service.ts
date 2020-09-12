@@ -17,7 +17,10 @@ export class UserService {
   }
 
   getUserLoggedIn() {
-  	return this.isLoggedIn;
+  	if(localStorage.currentUser){
+      return true;
+    }
+    return false;
   }
 
   currentUser() {

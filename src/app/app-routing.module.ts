@@ -7,7 +7,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { AuthGuard } from './auth.guard';
 
 
-const routes: Routes = [{ path: '', component: NavbarComponent}, { path: '', component: LoginComponent }, { path: 'employees', canActivate: [AuthGuard], runGuardsAndResolvers: 'always', component: EmployeesComponent }, { path: 'employee/:id', canActivate: [AuthGuard], runGuardsAndResolvers: 'always', component: EmployeeDetailsComponent }];
+const routes: Routes = [{ path: '', component: NavbarComponent}, { path: '', component: LoginComponent }, { path: 'employees', canActivate: [AuthGuard], runGuardsAndResolvers: 'always', component: EmployeesComponent }, { path: 'employee/:id', canActivate: [AuthGuard], runGuardsAndResolvers: 'always', component: EmployeeDetailsComponent }, { path: '**', redirectTo: ''}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
