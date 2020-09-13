@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   private formSubmitAttempt: boolean;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  uemail:string;
+  upass: string; 
 
   constructor(private fb: FormBuilder, private router: Router, private user: UserService) { }
 
@@ -33,12 +35,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit(e) {
     e.preventDefault();
-    var uemail=e.target.elements[0].value;
-    var upass=e.target.elements[1].value;
-    console.log(uemail, upass);
+    this.uemail=e.target.elements[0].value;
+    this.upass=e.target.elements[1].value;
 
-    if(uemail=="iam@abc.com" && upass=="abceds"){
-      localStorage.setItem('currentUser', JSON.stringify({token:'edstoken', name:uemail}));
+    if(this.uemail=="iam@abc.com" && this.upass=="abceds"){
+      localStorage.setItem('currentUser', JSON.stringify({token:'edstoken', name:this.uemail}));
       this.user.setUserLoggedIn(true);
       this.router.navigate(['/employees']);
     }
