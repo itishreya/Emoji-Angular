@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   
   loginForm: FormGroup;
   private formSubmitAttempt: boolean;
-  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+
   uemail:string;
   upass: string; 
 
@@ -20,17 +20,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-
-  		email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
+  		email: ['', [Validators.required, Validators.email]],
   		pass: ['', [Validators.required]]
   	});
-  }
-
-  isFieldInvalid(field: string) {
-    return (
-      (!this.loginForm.get(field).valid && this.loginForm.get(field).touched) ||
-      (this.loginForm.get(field).untouched && this.formSubmitAttempt)
-    );
   }
 
   onSubmit(e) {

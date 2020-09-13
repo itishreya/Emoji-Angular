@@ -6,8 +6,11 @@
   Email:
   <mat-form-field class="full-width-input">
   <input matInput type="text" formControlName="email" required>
-  <mat-error *ngIf="isFieldInvalid('email')">
-            Please enter a valid email
+  <mat-error *ngIf="loginForm.get('email').hasError('email') && !loginForm.get('email').hasError('required')">
+      Please enter a valid email address
+  </mat-error>
+  <mat-error *ngIf="loginForm.get('email').hasError('required')">
+        Email is required
   </mat-error>
 </mat-form-field>
 </label>
@@ -16,8 +19,8 @@
   Password:
   <mat-form-field class="full-width-input">
   <input matInput type="password" formControlName="pass" required>
-  <mat-error *ngIf="isFieldInvalid('pass')">
-            Please enter a valid password
+  <mat-error *ngIf="loginForm.get('pass').hasError('required')">
+        Pasword is required
   </mat-error>
   </mat-form-field>  
 </label>
